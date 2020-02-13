@@ -1,0 +1,7 @@
+enfants_enfants:
+    resource: "@EnfantsBundle/Resources/config/routing/enfants.yml"
+    prefix:   /enfants
+
+enfants_homepage:
+    path:     /
+    defaults: { _controller: EnfantsBundle:Default:index }

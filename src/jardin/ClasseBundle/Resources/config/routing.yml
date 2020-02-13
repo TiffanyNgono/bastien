@@ -1,0 +1,7 @@
+classe_classe:
+    resource: "@classeBundle/Resources/config/routing/classe.yml"
+    prefix:   /classe
+
+classe_homepage:
+    path:     /
+    defaults: { _controller: ClasseBundle:Default:index }

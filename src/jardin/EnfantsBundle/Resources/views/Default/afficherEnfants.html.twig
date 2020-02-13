@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Skeleton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="HTML5 skeleton index.html">
+    <meta name="keywords" content="html5,skeleton,index,homepage,jquery,bootstrap">
+    <meta name="author" content="Arul John">
+    <link href="{{ asset('css/bootstrap.min.css') }}" media="screen" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+<header class="navbar navbar-default">
+    <nav>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Afficher Classe</a>
+    </nav>
+</header>
+<main role="main">
+
+    <table class="table table-dark">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Date Naissance</th>
+            <th scope="col">Lieu</th>
+            <th scope="col">Maladies</th>
+            <th scope="col">Medecin</th>
+            <th scope="col">Abonnements</th>
+
+        </tr>
+        </thead>
+        {% for e in enfants %}
+            <tr>
+                <th scope="row"> {{ e.nom }} </th>
+                <td>{{ e.prenom }}</td>
+                <td>{{ e.dateNaissance }}</td>
+                <td>{{ e.lieu }}</td>
+                <td>{{ e.maladies }}</td>
+                <td>{{ e.medecin }}</td>
+                <td>{{ e.abonnements }}</td>
+                <li style="list-style: none;"><a href="{{ path('enfants_supprimerEnfants',{'id':e.id}) }}"> Supprimer </a></li>
+
+            </tr>
+        {% endfor %}
+    </table>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    //<![CDATA[
+    window.jQuery || document.write(unescape('%3Cscript src="/jquery.min.js">%3C/script>'))
+    //]]>
+</script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script>
+    //<![CDATA[
+    typeof $().modal == 'function'  || document.write(unescape('%3Cscript src="/bootstrap.min.js">%3C/script>'))
+    //]]>
+</script>
+</body>
+</html>

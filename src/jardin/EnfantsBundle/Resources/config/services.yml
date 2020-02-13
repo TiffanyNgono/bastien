@@ -1,0 +1,4 @@
+services:
+#    enfants.example:
+#        class: jardin\EnfantsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

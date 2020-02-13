@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Enfant</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ enfant.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ enfant.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ enfant.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ enfant.sexe }}</td>
+            </tr>
+            <tr>
+                <th>Lieunaissance</th>
+                <td>{{ enfant.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Datenaissance</th>
+                <td>{% if enfant.dateNaissance %}{{ enfant.dateNaissance|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Medecin</th>
+                <td>{{ enfant.medecin }}</td>
+            </tr>
+            <tr>
+                <th>Medecinnumero</th>
+                <td>{{ enfant.medecinNumero }}</td>
+            </tr>
+
+            <tr>
+                <th>Classe</th>
+                <td>{{ enfant.idClasse }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('enfants_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('enfants_edit', { 'id': enfant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

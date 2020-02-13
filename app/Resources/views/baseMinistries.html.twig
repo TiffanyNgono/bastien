@@ -1,0 +1,65 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% include '@Bastien/Include/head.html.twig' %}
+    <!-- //grid-slider -->
+</head>
+<body>
+
+<!-- start header_bottom -->
+<div class="header-bottom">
+    <div class="container">
+        <div class="header-bottom_left">
+            <i class="phone"> </i><span>+21620689906</span>
+        </div>
+        <div class="social">
+            <ul>
+                <li class="facebook"><a href="#"><span> </span></a></li>
+                <li class="twitter"><a href="#"><span> </span></a></li>
+                <li class="pinterest"><a href="#"><span> </span></a></li>
+                <li class="google"><a href="#"><span> </span></a></li>
+                <li class="tumblr"><a href="#"><span> </span></a></li>
+                <li class="instagram"><a href="#"><span> </span></a></li>
+                <li class="rss"><a href="#"><span> </span></a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- end header_bottom -->
+<!-- start menu -->
+<div class="menu" id="menu">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="{{ asset('BastienTemplate/images/bastien_logo.png') }}" alt=""/></a>
+        </div>
+        <div class="h_menu4"><!-- start h_menu4 -->
+            <a class="toggleMenu" href="#">Menu</a>
+            <ul class="nav">
+                <li class="active"><a href="{{ asset(path('bastien_homepage')) }}">Accueil</a></li>
+                <li><a href="{{ asset(path('bastien__sommes_nous')) }}">Qui sommes nous</a></li>
+                <li><a href="{{ asset(path('bastien_events_voir_list')) }}">Evenement</a></li>
+                <li><a href="{{ asset(path('bastien_temoignage_list')) }}">Temoignage</a>
+
+                </li>
+                <li><a href="blog.html">Live Predication</a></li>
+                <li><a href="pricing.html">Forum</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <script type="text/javascript" src="{{ asset('BastienTemplate/js/nav.js') }}"></script>
+        </div><!-- end h_menu4 -->
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- end menu -->
+<div class="main"  style="background-color: azure">{% block content %}{% endblock %}</div>
+
+{% include '@Bastien/Include/footer.html.twig' %}
+</body>
+</html>

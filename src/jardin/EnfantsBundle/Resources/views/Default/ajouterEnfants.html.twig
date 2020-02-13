@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Skeleton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="HTML5 skeleton index.html">
+    <meta name="keywords" content="html5,skeleton,index,homepage,jquery,bootstrap">
+    <meta name="author" content="Arul John">
+    <link href="{{ asset('css/bootstrap.min.css') }}" media="screen" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+<header class="navbar navbar-default">
+    <nav>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Classe</a>
+    </nav>
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/help"><span class="fa fa-help-o"></span> Help</a></li>
+                <li><a href="/login"><span class="fa fa-sign-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main role="main">
+
+    <div class="well">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+        {{ form_errors(form) }}
+
+        <div class="form-group">
+            {{ form_label(form.nom, "nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.nom) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.prenom, "prenom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.prenom) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.dateNaissance, "dateNaissance", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.dateNaissance) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.dateNaissance, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.lieu, "lieu", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.lieu) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.lieu, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.maladies, "maladies", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.maladies) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.maladies, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.medecin, "medecin", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.medecin) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.medecin, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.abonnements, "abonnements", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+            {{ form_errors(form.abonnements) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.abonnements, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+
+
+
+        <div class="col-sm-10">
+            {{ form_widget(form.Ajouter, {'attr': {'class': 'btn btn-primary'}}) }}
+        </div>
+
+
+        {{ form_rest(form) }}
+
+        {{ form_end(form) }}
+    </div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    //<![CDATA[
+    window.jQuery || document.write(unescape('%3Cscript src="/jquery.min.js">%3C/script>'))
+    //]]>
+</script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script>
+    //<![CDATA[
+    typeof $().modal == 'function'  || document.write(unescape('%3Cscript src="/bootstrap.min.js">%3C/script>'))
+    //]]>
+</script>
+</body>
+</html>
